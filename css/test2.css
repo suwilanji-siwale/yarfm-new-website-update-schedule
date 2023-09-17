@@ -1,0 +1,287 @@
+.buttons {
+	border-bottom: 1px solid slategrey;
+	z-index: -1;
+}
+
+.tab-buttons {
+	width: 60%;
+	display: flex;
+	color: #fff;
+}
+
+.btn {
+	border: none;
+	padding: 16px;
+	width: 100%;
+	margin: 4px 0;
+	font-size: 1rem;
+  background-color: transparent;
+}
+
+.btn:hover {
+	color: #5533FF;
+}
+
+.btn.active {
+	color: #5533FF;
+	border-bottom: 3px solid #5533FF;
+	margin-bottom: -2px;
+}
+
+.tab-contents {
+	display: block;
+	align-items: center;
+	margin-top: 32px;
+}
+
+.tab-contents h2 {
+	margin-bottom: 16px;
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+.tlacidlo {
+	margin-top: 10px;
+	margin-right: 10px;
+	padding: 15px 40px;
+	font-size: 14px;
+	line-height: 1em;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	color: white;
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background-color: #f06060;
+	box-shadow: 0px 3px 0px 0px #cd1313;
+  text-decoration: none;
+}
+
+.tlacidlo:hover {
+	background-color: #ed4444;
+}
+.tlacidlo:active {
+	box-shadow: 0px 1px 0px 0px #cd1313;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 10px; /* Adjust the gap between images */
+}
+
+/* Style for each image */
+.image {
+    width: 100%; /* Make sure each image takes up the entire width of its column */
+    height: auto; /* Maintain the aspect ratio of the images */
+    max-width: 100px;
+}
+
+
+
+.imageGrid {
+    line-height: 0;
+    margin-top: 20px;
+  }
+  .imageGrid .tile {
+    width:33.33%;
+    min-height:20em;
+    line-height: 1.2;
+    display:inline-block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    
+    color:#fff;
+    font-family:"Verdana",sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer; 
+    cursor: hand;
+  }
+  
+  .imageGrid .tile:before {
+    content: '';
+    background-color: rgba(15,15,15,0.5);
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+  }
+  
+  .imageGrid .tile:hover:before {
+    display: none;
+  }
+  
+  .imageGrid .tile .textWrapper {
+    text-align: center;
+    vertical-align: middle;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .75em;
+  }
+  
+  .imageGrid .tile .textWrapper .content {
+    display: none;
+  }
+  
+  .imageGrid .tile:hover .textWrapper .content {
+    display: block;
+  }
+  
+  .imageGrid .tile:hover .textWrapper .content h2 {
+    margin: 0;
+  }
+  
+  @media (max-width: 1000px) {
+    .imageGrid .tile {
+      width: 50%;
+    }
+  }
+   
+  @media (max-width: 700px) {
+    .imageGrid .tile {
+      width: 100%;
+    }
+    
+  }
+
+  /*New schedule section*/
+
+.tab {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+}
+
+.tab button {
+    background-color: inherit;
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #000;
+}
+
+.tab button:hover {
+    background-color: #5533FF;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tab button.active {
+  background-color: #5533FF; /* Blue background color for the active button */
+  color: #fff;
+
+}
+
+/*Overlay playing now css code*/
+
+.overlay {
+  position: relative; /* Change to relative positioning */
+}
+
+.gallery-item {
+  position: relative; /* Add relative positioning for .gallery-item */
+}
+
+.time-label{
+  margin: 0px;
+  background-color: #5533FF;
+}
+.show-name{
+  margin-top: 26px;
+  background-color: #5533FF;
+}
+.play-now-label {
+  margin: 80px;
+  background-color: #cd1313;
+}
+
+.time-label,
+.show-name,
+.play-now-label {
+  position: absolute; /* Use absolute positioning to position elements inside .gallery-item */
+  
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+   /* Position from the left edge of .gallery-item */
+  top: -132px; /* Position from the top edge of .gallery-item */
+}
+
+
+/* Add CSS for the overlay labels and center them 
+.overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-label,
+.show-name,
+.play-now-label {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.time-label {
+  margin-bottom: 5px;
+}
+
+.play-now-label {
+  background-color: #ff0000; /* Red background for "Playing Now" label 
+}
+*/
+/* Add CSS to hide the "Playing Now" label by default */
+.suwila {
+  display: none;
+}
